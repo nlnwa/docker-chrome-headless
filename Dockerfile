@@ -18,7 +18,7 @@ EXPOSE 9222
 ADD start.sh import_cert.sh /usr/bin/
 
 VOLUME /data
-ENV HOME=/data PROXY=proxy:8080
+ENV HOME=/data DEBUG_ADDRESS=0.0.0.0 DEBUG_PORT=9222
 
 CMD ["/usr/bin/start.sh"]
 
