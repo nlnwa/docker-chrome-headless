@@ -19,6 +19,7 @@ EXPOSE 9222
 
 ADD start.sh import_cert.sh /usr/bin/
 
+RUN mkdir /data
 VOLUME /data
 ENV HOME=/data DEBUG_ADDRESS=0.0.0.0 DEBUG_PORT=9222
 
