@@ -30,9 +30,6 @@ function add_cert {
   fi
 }
 
-certutil -d sql:$NSSDB --empty-password -N -f /dev/null 2> /dev/null
-echo "Keystore created"
-
 for pem in `ls $CERTS/*.pem 2> /dev/null`; do
   add_cert $pem
 done

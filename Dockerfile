@@ -6,7 +6,8 @@ RUN apt-get update -qqy \
   && apt-get -qqy install libnss3 libnss3-tools libfontconfig1 wget ca-certificates apt-transport-https inotify-tools \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-ENV CHROME_VERSION=58.0.3029.19
+# Find the latest unstable version here: https://www.ubuntuupdates.org/ppa/google_chrome. Remove last '-1' to get Chrome version
+ENV CHROME_VERSION=64.0.3269.3
 
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
