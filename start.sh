@@ -17,5 +17,6 @@ if [ -n "$CHROME_OPTS" ]; then
 fi
 
 # Start Chrome
+echo "Starting Chrome version: ${CHROME_VERSION}"
 exec sh -c "/usr/bin/google-chrome-unstable $CHROME_ARGS"
 
