@@ -7,7 +7,7 @@ RUN apt-get update -qqy \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # Find the latest unstable version here: https://www.ubuntuupdates.org/google-chrome-unstable.
-ENV CHROME_VERSION=65.0.3322.3-1
+ENV CHROME_VERSION=67.0.3386.1-1
 
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
